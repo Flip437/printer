@@ -61,6 +61,6 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem 'dropzonejs-rails', '~> 0.7.1'
+
 
 gem 'better_errors', '~> 2.1', '>= 2.1.1'

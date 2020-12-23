@@ -2,15 +2,23 @@ class HomeController < ApplicationController
 
     def print
 
-        puts "PARAMSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS"
-        puts params
-        puts activities_params
-        puts "PARAMSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS"
-
-        system("lpr", "/home/flip/Documents/Avant de C")
+        @temp_file = params[:file].tempfile
+        @temp_file.open
+        @temp_file.read
 
 
+        @path = "/tmp/tuniqueinstance_jspm3"
+        @temp_path = @temp_file.path
 
+        puts "PATHSSSSSSSSSSSSSSSSSSSSSSS"
+        puts @temp_path
+        puts "PATHSSSSSSSSSSSSSSSSSSSSSSS"
+
+
+
+
+        #system("lpr", @path)
+        system("lpr", @temp_path)
 
     end
 
